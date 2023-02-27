@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func GetInt64Param(c gin.Context, key string) int64 {
+func GetInt64Param(c *gin.Context, key string) int64 {
 
 	str := c.Param(key)
 
@@ -15,7 +15,7 @@ func GetInt64Param(c gin.Context, key string) int64 {
 
 }
 
-func GetIdParam(c gin.Context) int64 {
+func GetIdParam(c *gin.Context) int64 {
 
 	return GetInt64Param(c, "id")
 
